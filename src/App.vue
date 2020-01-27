@@ -2,18 +2,21 @@
   <div id="app">
     <Header />
     <Home />
+    <Upload />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
+import Upload from './components/Upload.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Home
+    Home,
+    Upload,
   }
 }
 </script>

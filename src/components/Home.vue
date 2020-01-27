@@ -117,6 +117,7 @@ export default {
 
 .tab_navigation_wrapper .tabs > li {
     display: inline;
+    list-style: none;
     margin: 0 10px;
     white-space: nowrap;
     text-transform: uppercase;
@@ -185,6 +186,7 @@ export default {
 
 .discovery_body_grid ul > li:last-child {
   flex-grow: 10;
+  list-style: none;
 }
 
 .discovery_body_grid li > a > img {
