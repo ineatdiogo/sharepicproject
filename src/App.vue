@@ -1,25 +1,17 @@
 <template>
   <div id="app">
-    <Header />
-    <Home />
-    <Upload />
-    <Overlay />
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Home from './components/Home.vue'
-import Upload from './components/Upload.vue'
-import Overlay from './components/Overlay.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    Header,
-    Home,
-    Upload,
-    Overlay
+    HelloWorld
   }
 }
 </script>
