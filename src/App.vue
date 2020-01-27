@@ -3,6 +3,7 @@
     <Header />
     <Home />
     <Upload />
+    <Overlay />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
 import Upload from './components/Upload.vue'
+import Overlay from './components/Overlay.vue'
 
 export default {
   name: 'app',
@@ -17,6 +19,7 @@ export default {
     Header,
     Home,
     Upload,
+    Overlay
   }
 }
 </script>
