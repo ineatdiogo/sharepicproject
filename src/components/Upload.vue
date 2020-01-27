@@ -1,5 +1,5 @@
 <template>
-    <div class="upload_modal_wrapper">
+    <div class="upload_modal_wrapper" v-if="success">
         <div class="upload_modal">
             <div class="upload_modal_title">
                 Upload new image
@@ -30,6 +30,15 @@
 <script>
 export default {
     name: "Upload",
+    date: {
+        success: false
+    },
+    methods: {
+        toggle: () => {
+            let upload = document.querySelector('.upload_modal_wrapper');
+            upload.classList.display = "none";
+        }
+    }
 }
 </script>
 
