@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Website Styles */
+html {
+    height: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    color: #222;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/*
+    Header Style
+*/
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1001;
+    top: 0;
+    min-height: 72px;
+    width: 100vw;
+    background-color: #FFF;
+    transition: all 0.1s ease-out;
+    padding: 16px 64px;
+    white-space: nowrap;
+}
+
+.top-nav .logo {
+    max-width: 240px;
+}
+
+.top-nav .logo img {
+    width: 100%;
+}
+
+.top-nav_actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-nav .search {
+    position: relative;
+    min-width: 224px;
+    min-height: 24px;
+    margin-right: 24px;
+}
+
+.top-nav .search .submit {
+    background-image: url(https://assetcdn.500px.org/assets/search-8fe8897ae58915b80f55b3d78163cf63.svg);
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    height: 16px;
+    width: 16px;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: 30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.top-nav .search .search_input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 25px;
+    background: #F7F8FA;
+    padding: 0;
+    font-weight: normal;
+    font-size: 16px;
+    color: #222;
+    text-indent: 48px;
+    outline: none;
+}
+
+.top-nav .user {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-nav .user .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    color: #222;
+    font-size: 16px;
+    outline: none;
+    padding: 0 16px;
+    transition: background-color 0.1s ease-out;
+}
+
+.top-nav .user .button:hover {
+    color: #0099e5;
+}
+
+.top-nav .user .button.signup {
+    border-color: #222;
+    border-radius: 16px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.top-nav .user .user_account,  .top-nav .user .user_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 24px;
+    transition: all 0.1s ease-out;
+}
+
+.top-nav .user .user_link:hover {
+    background-color: #0099e5;
+    fill: #fff;
+}
+
+.top-nav .user .user_account img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.top-nav .user .button.upload {
+    height: 46px;
+    padding: 0 28px;
+    border-color: #222;
+    border-radius: 25px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.top-nav .user .button.upload svg {
+    margin-right: 10px;
+}
+
+.top-nav .user .button.upload:hover {
+    background: #0099e5;
+    color: #fff;
+    border-color: #0099e5;
+}
+
+.top-nav .user .button.upload:hover svg {
+    stroke: #fff;
+    fill: #fff;
+    color: #fff;
+}
+
+/*
+    Discovery Header Style
+*/
+.discovery_header_wrapper {
+    display: flex;
+    height: 115px;
+    padding: 0 60px;
+    background-color: #fff;
+}
+
+.discovery_header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #222;
+    margin: 32px 0 10px 0;
+}
+
+.discovery_header p {
+    font-size: 18px;
+    line-height: 1.4em;
+    color: #525558;
+}
+
+/*
+    Discovery Tab Style
+*/
+.tab_navigation_wrapper {
+    position: relative;
+    transform: translateZ(0);
+    border-bottom: 1px solid #eeeff2;
+}
+
+.tab_navigation_wrapper .tabs {
+    background-color: #fff;
+    list-style-type: none;
+    text-align: left;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-left: 50px;
+}
+
+.tab_navigation_wrapper .tabs > li {
+    display: inline;
+    margin: 0 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+}
+
+.tab_navigation_wrapper .tabs > li > a {
+    font-size: 14px;
+    display: inline-block;
+    padding: 15px 0;
+    border-bottom: 2px solid transparent;
+    color: #71767a;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+.tab_navigation_wrapper .tabs > li.active > a {
+    color: #0099e5;
+    border-bottom: 2px solid #0099e5;
+}
+
+/*
+    Discovery Body Style
+*/
+.discovery_body_wrapper {
+    background-color: #f7f8fa;
+    padding: 20px 50px;
+}
+
+.discovery_body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo_thumbnail {
+    height: 40vh;
+    flex-grow: 1;
+    opacity: 1;
+    background-color: #eeeff2;
+}
+
+.photo_thumbnail:last-child {
+    flex-grow: 10;
+}
+
+.photo_thumbnail img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+  
+
+.discovery_body_grid ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.discovery_body_grid ul > li {
+  margin: 5px;
+  height: 40vh;
+  flex-grow: 1;
+}
+
+.discovery_body_grid ul > li:last-child {
+  flex-grow: 10;
+}
+
+.discovery_body_grid li > a > img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+/*
+    Upload Modal Style
+*/
+.upload_modal_wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.upload_modal_wrapper .upload_modal {
+    width: 450px;
+    height: 550px;
+    background: #f7f8fa;
+    position: relative;
+}
+
+.upload_modal_wrapper .upload_modal_title {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    padding: 20px;
+    background: #fff;
+}
+
+.upload_modal_wrapper .upload_modal_content {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.upload_modal_wrapper .upload_modal_content .input_wrapper {
+    padding: 20;
+    margin-bottom: 20px;
+}
+
+.upload_modal_wrapper .upload_modal_content .input_wrapper label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.upload_modal_wrapper .upload_modal_content .input_wrapper input, .upload_modal_wrapper .upload_modal_content .input_wrapper textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #efefef;
+    background-clip: padding-box;
+    border: none;
+    border-radius: .25rem;
+    outline: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+::-webkit-file-upload-button {
+    background: #dedede;
+    border-radius: 10px;
+    color: #666;
+    box-shadow: none;
+    outline: none;
+    padding: 8px;
+}
+
+.upload_modal_wrapper .upload_modal_content .actions {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.upload_modal_wrapper .upload_modal_content .actions .button {
+    cursor: pointer;
+    width: 153px;
+    height: 48px;
+    line-height: 48px;
+    background: #0870d1;
+    border-radius: 28px;
+    font-size: 16px;
+    font-family: Arial,Helvetica,sans-serif;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.upload_modal_wrapper .upload_modal_content .actions .button {
+    background: #2986f7;
+}
+
+/*
+    Overlay Style
+*/
+.overlay {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+
