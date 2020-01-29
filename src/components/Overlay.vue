@@ -14,6 +14,7 @@ export default {
 */
 .overlay {
     position: fixed;
+    display: none;
     z-index: 9998;
     top: 0;
     left: 0;

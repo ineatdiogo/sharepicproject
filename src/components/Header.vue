@@ -9,13 +9,13 @@
                 <input type="text" placeholder="Search on SharePic" class="search_input" />
             </div>
             <!-- Unconnected user -->
-            <div class="user" v-if="!user_connected">
-                <a href="/" class="signin button">Se connecter</a>
-                <a href="/" class="signup button">Créer un compte</a>
+            <div class="user">
+                <a href="/login" class="signin button" data-toggle="modal" data-target="#userModal">Se connecter</a>
+                <a href="/register" class="signup button" data-toggle="modal" data-target="#userRegister">Créer un compte</a>
             </div>
 
             <!-- Connected User -->
-            <div class="user" v-if="user_connected">
+            <div class="user">
                 <a class="user_link user_account">
                     <img src="https://drscdn.500px.org/user_avatar/14517171/q%3D85_w%3D50_h%3D50/v2?webp=true&v=1&sig=9bc42e40486b89ffe32344944a77a9fd171314fa413622dc7da9b15a76c431b4" alt="">
                 </a>

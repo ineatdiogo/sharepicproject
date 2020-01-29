@@ -1,5 +1,5 @@
 <template>
-    <div class="upload_modal_wrapper" v-if="success">
+    <div class="upload_modal_wrapper">
         <div class="upload_modal">
             <div class="upload_modal_title">
                 Upload new image
@@ -51,7 +51,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: -9999;
     top: 0;
     left: 0;
     bottom: 0;
