@@ -9,7 +9,7 @@
                         </div>
                         <div class="modal-body">
                             <div v-if="error" class="alert alert-danger">{{error}}</div>
-                                <form @submit.prevent="submit">
+                                <form @submit.prevent="registration">
                                     <div class="form-group">
                                         <label for="username" class="control-label">Pseudo</label>
                                         <input id="username" type="username" class="form-control" required autofocus v-model="username"/>
@@ -25,11 +25,7 @@
                                         <input id="password"  type="password" class="form-control"  required v-model="password" />
                                     </div>
 
-                                    <div class="form-group mb-0">
-                                        <div class="">
-                                            <button type="submit" class="btn btn-outline-secondary">S'inscrire</button>
-                                        </div>
-                                    </div>
+                                    <button type="submit" class="btn btn-outline-secondary">S'inscrire</button>
                                 </form>
                         </div>
                     </div>
@@ -40,8 +36,31 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
     name: 'Register',
+
+    data() {
+        return {
+            username: null,
+            email: null,
+            password: null,
+            errors: null
+        }
+    },
+
+    methods: {
+        registration() {
+            let user = firebase.auth().currentUser;
+
+            if (user) {
+                console.log('user added');
+            } else {
+                console.log('user not added');
+            }
+        }
+    }
+
 }
 </script>
 
