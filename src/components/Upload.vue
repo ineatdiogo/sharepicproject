@@ -28,10 +28,13 @@
 </template>
 
 <script>
+
+
 export default {
     name: "Upload",
-    date: {
-        success: false
+
+    data: () => {
+        //DOING something?
     },
     methods: {
         toggle: () => {

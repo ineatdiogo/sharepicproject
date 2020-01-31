@@ -4,6 +4,7 @@
     <Login />
 	<Register />
     <Home />
+	<!-- <Images /> -->
     <Upload />
     <Overlay />
   </div>
@@ -12,6 +13,7 @@
 <script>
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
+// import Images from './components/Images.vue'
 import Upload from './components/Upload.vue'
 import Overlay from './components/Overlay.vue'
 import Login from './components/Login.vue'
@@ -24,7 +26,8 @@ export default {
         Header,
         Login,
 		Register,
-        Home,
+		Home,
+		// Images,
         Upload,
         Overlay, 
   }

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+// import VueFirestore from 'vue-firestore'
 import  firebase from 'firebase'
 
 Vue.config.productionTip = false
@@ -17,10 +18,12 @@ export let firebaseConfig = {
 };
 
   // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 
+// require('firebase/firestore')
 
+// Vue.use(VueFirestore)
 
-new Vue({  
+new Vue({
   render: h => h(App),
 }).$mount('#app')
