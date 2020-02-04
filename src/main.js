@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-const firebase = require("firebase")
+const firebase = require("firebase/app")
+require('firebase/auth')
 require("firebase/firestore")
 
 Vue.config.productionTip = false
