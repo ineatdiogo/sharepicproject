@@ -2,9 +2,9 @@
   <div id="app">
     <Header />
     <Login />
-	<Register />
+    <Register />
     <Home />
-	<!-- <Images /> -->
+    <Pictures />
     <Upload />
     <Overlay />
   </div>
@@ -13,7 +13,7 @@
 <script>
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
-// import Images from './components/Images.vue'
+import Pictures from './components/Pictures.vue'
 import Upload from './components/Upload.vue'
 import Overlay from './components/Overlay.vue'
 import Login from './components/Login.vue'
@@ -23,13 +23,13 @@ import Register from './components/Register.vue'
 export default {
   name: 'app',
   components: {
-        Header,
-        Login,
-		Register,
-		Home,
-		// Images,
-        Upload,
-        Overlay, 
+    Header,
+    Login,
+    Register,
+    Home,
+    Pictures,
+    Upload,
+    Overlay, 
   }
 
 }

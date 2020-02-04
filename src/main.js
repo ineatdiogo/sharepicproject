@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import VueFirestore from 'vue-firestore'
-import  firebase from 'firebase'
+
+const firebase = require("firebase")
+require("firebase/firestore")
 
 Vue.config.productionTip = false
-
  
-export let firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyAuYUDAwkxgtnejiF5x2XZptIwYa2Q8REQ",
     authDomain: "sharepic-31521.firebaseapp.com",
     databaseURL: "https://sharepic-31521.firebaseio.com",
@@ -17,12 +17,13 @@ export let firebaseConfig = {
     measurementId: "G-03XPDDXL7V"
 };
 
-  // Initialize Firebase
-firebase.initializeApp(firebaseConfig)
+// Initialize Firebase
+const fb = firebase.initializeApp(firebaseConfig) //fb = firebase
 
-// require('firebase/firestore')
+const db = firebase.firestore() // db = database
 
-// Vue.use(VueFirestore)
+export {fb, db}
+
 
 new Vue({
   render: h => h(App),

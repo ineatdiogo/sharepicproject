@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import {fb} from '../main.js'
 
 export default {
     
@@ -51,7 +51,7 @@ export default {
             }else if(!this.password) {
                 this.errors = 'Le mot de passe ne peut être vide!';
             } else {
-                firebase
+                fb
                 .auth()
                 .createUserWithEmailAndPassword(this.email, this.password)
                 .then((result) => {

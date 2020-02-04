@@ -32,10 +32,6 @@
 
 export default {
     name: "Upload",
-
-    data: () => {
-        //DOING something?
-    },
     methods: {
         toggle: () => {
             let upload = document.querySelector('.upload_modal_wrapper');

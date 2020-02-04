@@ -32,7 +32,7 @@
 
 <script>
 
-import firebase from "firebase";
+import {fb} from '../main.js'
 
 export default {
     name: 'Login',
@@ -45,7 +45,7 @@ export default {
     },
     methods: {
         submit() {
-            firebase
+            fb
                 .auth()
                 .signInWithEmailAndPassword(this.email, this.password)
                 .then((data) => console.log(data))
